@@ -1,0 +1,79 @@
+
+ul{
+  display: flex;
+  list-style: none;
+  float: right;
+ 
+}
+a{
+  text-decoration: none;
+  margin: 15px;
+  font-size:20px;
+  color: black;
+  background-color: rgb(238, 236, 233);
+  padding: 10px;
+  border-radius: 10px;}
+  body{
+    background-color: rgb(189, 179, 179);
+    font-family:  sans-serif;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    width: 600px;
+    padding-bottom: 30px;
+    background-color: antiquewhite;
+  }
+  .text{
+    color: rgb(189, 189, 152);
+    font-size: 30px;
+    font-weight: 700;
+  }
+ .input{
+  margin: 10px;
+ 
+ }
+.input input{
+  height: 30px;
+  width: 300px;
+  background: transparent;
+  border-radius: 5px;
+  outline: none;
+  color:rgb(189, 179, 179);
+  font-size: 19px;
+}
+.forgotPass{
+  padding-left: 62px;
+  margin-top: 27px;
+  font-size: 18px;
+}
+.forgotPass span{
+  color: blue;
+  cursor: pointer;
+}
+.submit{
+  display: flex;
+  gap: 30px;
+  margin: 20px auto;
+  background: antiquewhite;
+  font-size: 19px;
+  cursor: pointer;
+}
+button{
+  background-color:rgb(77, 77, 141);
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px;
+}
+img{
+  float: left;
+  margin-left: 50px;
+}
+.bg{
+  background-image: url(./component/logo-removebg-preview.png);
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
