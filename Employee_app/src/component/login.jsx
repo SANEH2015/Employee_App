@@ -4,7 +4,7 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { FaPhone } from "react-icons/fa6";
 import { BsFileEarmarkPerson } from "react-icons/bs";
 import { useState } from 'react';
-  
+import Image from '../assets/person2-removebg-preview.png'
 
 
 function Login(){
@@ -18,6 +18,7 @@ function Login(){
 
 const handleSubmit =()=>{
  const Logindata = {
+  
   Name,
   Email,
   Phone_Number,
@@ -43,7 +44,9 @@ const handleSubmit =()=>{
           <div className="text">Register Form</div>
           <div className="underline"></div>
         </div>
+        <img src={Image}></img> <br></br> 
         <div className="input"  >
+      
           <div className="input" >
           <IoPerson />
             <input type="text" placeholder="Name" value={Name}   onChange={e => setName(e.target.value)}  ></input>

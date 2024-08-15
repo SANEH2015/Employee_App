@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from '../assets/person2-removebg-preview.png'
 
 const Employee = () => {
   const [employees, setEmployees] = useState([]);
@@ -41,7 +42,7 @@ const Employee = () => {
   };
 
   return (
-    <div style={{ marginLeft: "10px" }}>
+    <div style={{ marginLeft: "30px" }}>
       <h2>Employee List</h2>
       <ul>
         {employees.map((employee) => (
@@ -49,6 +50,7 @@ const Employee = () => {
             {editing === employee.ID ? (
               <form>
                 <label>
+                <img src={Image}></img> <br></br> 
                   Name:
                   <input
                     type="text"
