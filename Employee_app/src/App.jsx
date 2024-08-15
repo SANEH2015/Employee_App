@@ -13,8 +13,8 @@ function App() {
 
   return (
     <>
-      <section><Navigation/></section>
-      <section><Page/></section>
+      <section><Navigation/></section><br></br>
+      {/* <section><Page/></section> */}
       <section><Login/></section>
       <section><Employee  /></section>
       

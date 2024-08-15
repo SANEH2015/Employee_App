@@ -47,13 +47,14 @@ const Employee = () => {
   return (
     <div style={{ marginLeft: "30px" }}>
       <h2>Employee List</h2>
+      <input type='text' placeholder="search by id " style={{width:"300px",height:"30px",bord}}></input>
       <ul>
         {employees.map((employee) => (
           <li key={employee.ID}>
             {editing === employee.ID ? (
               <form>
                 <label>
-                <img src={Image}></img> <br></br> 
+                <img className='lg' src={Image}></img> <br></br> 
                   Name:
                   <input
                     type="text"

@@ -40,13 +40,10 @@ const handleSubmit =()=>{
       <>
    
       <div className="container">
-        <div className="header">
-          <div className="text">Register Form</div>
-          <div className="underline"></div>
-        </div>
-        <img src={Image}></img> <br></br> 
-        <div className="input"  >
-      
+       
+        <div className="form"  >
+          <h1>Register Form</h1>
+        <img className="lg"  src={Image}></img> <br></br> 
           <div className="input" >
           <IoPerson />
             <input type="text" placeholder="Name" value={Name}   onChange={e => setName(e.target.value)}  ></input>
@@ -67,8 +64,9 @@ const handleSubmit =()=>{
           <RiLockPasswordFill />
             <input type="text" placeholder="ID" value={ID}    onChange={e => setID(e.target.value)}  ></input>
           </div><br></br>
-          <button onClick={handleSubmit}>Submit</button>
+          <button style={{width:"100px",marginLeft:"110px",backgroundColor:" rgb(18, 139, 173",border:"none"}} onClick={handleSubmit}>Submit</button>
         </div>
+     
       </div>
      
    
