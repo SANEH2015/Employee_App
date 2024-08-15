@@ -22,14 +22,17 @@ const Employee = () => {
   const handleEdit = (employee) => {
     setEditing(employee.ID);
     setUpdatedEmployee(employee);
+   
   };
 
   const handleUpdate = () => {
     const updatedEmployees = employees.map((employee) => {
       if (employee.ID === editing) {
         return updatedEmployee;
+     
       }
       return employee;
+      
     });
     localStorage.setItem("Employees", JSON.stringify(updatedEmployees));
     setEmployees(updatedEmployees);
@@ -100,8 +103,8 @@ const Employee = () => {
                 <p><strong>Phone Number:</strong> {employee.Phone_Number}</p>
                 <p><strong>Employee Position:</strong> {employee.Employee_Positon}</p>
                 <p><strong>ID:</strong> {employee.ID}</p>
-                <button onClick={() => handleEdit(employee)}>Edit</button>
-                <button onClick={() => handleDelete(employee.ID)}>Delete</button>
+                <button style={{backgroundColor:"green"}}onClick={() => handleEdit(employee)}>Edit</button>
+                <button style={{backgroundColor:"red"}} onClick={() => handleDelete(employee.ID)}>Delete</button>
               </>
             )}
           </li>

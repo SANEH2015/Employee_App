@@ -10,7 +10,7 @@ a{
   margin: 15px;
   font-size:20px;
   color: black;
-  background-color: rgb(238, 236, 233);
+
   padding: 10px;
   border-radius: 10px;}
   body{
@@ -24,7 +24,7 @@ a{
     margin-top: 200px;
     width: 600px;
     padding-bottom: 30px;
-    background-color: antiquewhite;
+   
   }
   .text{
     color: rgb(189, 189, 152);
@@ -62,7 +62,7 @@ a{
   cursor: pointer;
 }
 button{
-  background-color:rgb(77, 77, 141);
+
   padding: 15px;
   border-radius: 5px;
   margin: 10px;

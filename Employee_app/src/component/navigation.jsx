@@ -11,10 +11,10 @@ function Navigation(){
         </div>
         <ul>
          
-  <li><a href="">Home</a></li>
-  <li><a href="">Employee</a></li>
-  <li><a href="">setting</a></li>
-  <li><a href="">footer</a></li>
+  <li><a href="">HOME</a></li>
+  <li><a href="">EMPLOYEE</a></li>
+  <li><a href="">SETTING</a></li>
+  <li><a href="">FOOTER</a></li>
   
 </ul>
 </div>

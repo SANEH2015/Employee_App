@@ -5,6 +5,7 @@ import './App.css'
 import Login from './component/login'
 import Navigation from './component/navigation'
 import Employee from './component/employeelist'
+import Page from './component/page'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <section><Navigation/></section>
+      <section><Page/></section>
       <section><Login/></section>
       <section><Employee  /></section>
       
