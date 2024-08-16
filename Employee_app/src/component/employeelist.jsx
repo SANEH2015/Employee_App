@@ -45,18 +45,18 @@ const Employee = () => {
   };
 
   return (
-    <div style={{ marginLeft: "30px" }}>
+    <div>
       <h2>Employee List</h2>
-      <input type='text' placeholder="search by id " style={{width:"300px",height:"30px",bord}}></input>
+     <div><input type='text' placeholder="Name" style={{width:"300px",height:"30px",borderRadius:"10px"}}></input></div> 
       <ul>
         {employees.map((employee) => (
           <li key={employee.ID}>
             {editing === employee.ID ? (
-              <form>
+              <form style={{backgroundColor:" rgb(121, 139, 155)",margin:"10px",padding:"20px",borderRadius:"10px"}}>
                 <label>
                 <img className='lg' src={Image}></img> <br></br> 
                   Name:
-                  <input
+                  <input style={{width:'200px',height:"30px",borderRadius:"5px"}}
                     type="text"
                     name="Name"
                     value={updatedEmployee.Name}
@@ -66,7 +66,7 @@ const Employee = () => {
                 <br />
                 <label>
                   Email:
-                  <input
+                  <input style={{width:'200px',height:"30px",borderRadius:"5px"}}
                     type="email"
                     name="Email"
                     value={updatedEmployee.Email}
@@ -76,7 +76,7 @@ const Employee = () => {
                 <br />
                 <label>
                   Phone Number:
-                  <input
+                  <input style={{width:'200px',height:"30px",borderRadius:"5px"}}
                     type="tel"
                     name="Phone_Number"
                     value={updatedEmployee.Phone_Number}
@@ -86,7 +86,7 @@ const Employee = () => {
                 <br />
                 <label>
                   Employee Position:
-                  <input
+                  <input style={{width:'200px',height:"30px",borderRadius:"5px"}}
                     type="text"
                     name="Employee_Positon"
                     value={updatedEmployee.Employee_Positon}

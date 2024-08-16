@@ -41,7 +41,7 @@ const handleSubmit =()=>{
    
       <div className="container">
        
-        <div className="form"  >
+        <div className="form"   >
           <h1>Register Form</h1>
         <img className="lg"  src={Image}></img> <br></br> 
           <div className="input" >
