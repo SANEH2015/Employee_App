@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import Footer from './Footer';
 // EmployeeForm component for adding and editing employees
 const EmployeeForm = ({ employee, onSave, onCancel }) => {
   const [formData, setFormData] = useState({
@@ -161,7 +161,7 @@ const EmployeeForm = ({ employee, onSave, onCancel }) => {
   );
 };
 
-// EmployeeList component to display all employees horizontally
+// EmployeeList component to display all employees 
 const EmployeeList = ({ employees, onEdit, onDelete, searchTerm }) => {
     const filteredEmployees = employees.filter(employee =>
       employee.id.includes(searchTerm)
@@ -180,8 +180,8 @@ const EmployeeList = ({ employees, onEdit, onDelete, searchTerm }) => {
               backgroundColor: '#f9f9f9',
               textAlign: 'center',
               boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-              width: '250px', // Fixed width to ensure consistent sizing
-              margin: '10px', // Space between employees
+              width: '250px', 
+              margin: '10px', 
             }}
           >
             <h3 style={{ fontSize: '18px', fontWeight: 'bold' }}>
@@ -237,7 +237,7 @@ const App = () => {
   const [employees, setEmployees] = useState([]);
   const [currentEmployee, setCurrentEmployee] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [activePage, setActivePage] = useState('home'); // To track active page
+  const [activePage, setActivePage] = useState('home');
 
   useEffect(() => {
     const storedEmployees = JSON.parse(localStorage.getItem('employees')) || [];
@@ -285,6 +285,7 @@ const App = () => {
         backgroundColor: '#2d3748',
         padding: '10px',
         borderRadius: '8px',
+       
       }}>
         <button
           onClick={() => setActivePage('home')}
@@ -342,18 +343,7 @@ const App = () => {
       )}
 
       {/* Footer */}
-      <footer style={{
-        marginTop: '20px',
-        padding: '10px',
-        backgroundColor: '#2d3748',
-        color: 'white',
-        textAlign: 'center',
-        position: 'absolute',
-        bottom: '0',
-        width: '100%',
-      }}>
-        <p>&copy; 2024 Employee Management System. All Rights Reserved.</p>
-      </footer>
+      <Footer/>
     </div>
   );
 };
