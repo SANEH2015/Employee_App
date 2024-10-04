@@ -4,11 +4,11 @@
 
 Clone the project
 ```bash
-  git clone https://github.com/Amniei/Shopping-List.git
+  https://github.com/SANEH2015/Employee_App.git
 ```
 Go to the project directory
 ```bash
-  cd Shopping-List
+  cd Employee_app
 ```
 Install dependencies
 ```bash
