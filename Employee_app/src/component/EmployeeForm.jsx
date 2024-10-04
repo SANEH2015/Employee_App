@@ -11,6 +11,8 @@ const EmployeeForm = ({ employee, onSave, onCancel }) => {
     id: '',
   });
 
+  const [imageUrl, setImageUrl] = useState(null); // To store the image URL permanently if present
+
   useEffect(() => {
     if (employee) {
       setFormData({
@@ -18,17 +20,20 @@ const EmployeeForm = ({ employee, onSave, onCancel }) => {
         surname: employee.surname,
         email: employee.email,
         phone: employee.phone,
-        image: null,
+        image: null, // Set this to null when editing, but store image URL separately
         position: employee.position,
         id: employee.id,
       });
+      setImageUrl(employee.image); // Keep the image URL when editing
     }
   }, [employee]);
 
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
     if (type === 'file') {
-      setFormData({ ...formData, [name]: files[0] });
+      const file = files[0];
+      setFormData({ ...formData, [name]: file });
+      setImageUrl(URL.createObjectURL(file)); // Update the image preview when file is chosen
     } else {
       setFormData({ ...formData, [name]: value });
     }
@@ -38,9 +43,10 @@ const EmployeeForm = ({ employee, onSave, onCancel }) => {
     e.preventDefault();
     const updatedEmployee = {
       ...formData,
-      image: formData.image ? URL.createObjectURL(formData.image) : employee?.image,
+      image: formData.image ? imageUrl : employee?.image, // Use imageUrl or existing image if no new image is uploaded
     };
     onSave(updatedEmployee);
+    // Reset form but keep the previous image URL if it exists
     setFormData({
       name: '',
       surname: '',
@@ -50,6 +56,7 @@ const EmployeeForm = ({ employee, onSave, onCancel }) => {
       position: '',
       id: '',
     });
+    setImageUrl(null); // Reset the image URL after save
   };
 
   return (
@@ -67,7 +74,6 @@ const EmployeeForm = ({ employee, onSave, onCancel }) => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-         
         }}
       >
         <input
@@ -148,6 +154,19 @@ const EmployeeForm = ({ employee, onSave, onCancel }) => {
             display: 'block',
           }}
         />
+        {imageUrl && (
+          <img
+            src={imageUrl}
+            alt="Employee"
+            style={{
+              marginBottom: '10px',
+              width: '100px',
+              height: '100px',
+              objectFit: 'cover',
+              borderRadius: '50%',
+            }}
+          />
+        )}
         <input
           type="text"
           name="position"

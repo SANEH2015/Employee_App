@@ -57,16 +57,16 @@ const App = () => {
   };
 
   return (
-    <div style={{padding: 'px', textAlign: 'center',justifyContent:"center" ,alignItems:"center",backgroundColor:"#AED1FF",height:"100%"}}>
+    <div style={{padding: 'px', textAlign: 'center',justifyContent:"center" ,alignItems:"center",height:"100%"}}>
      
       <Navigation setActivePage={setActivePage} />
 
-   
+ 
       <SuccessMessage message={successMessage} />
 
  
-      {activePage === 'home' && <h1>Welcome to the Employee Management App</h1>}
-
+      {activePage === 'home' && <h1 style={{marginTop:"20%",color:"#35A6FF",fontSize:'70px'}}>Welcome to the Employee Management App</h1>}
+      
       {activePage === 'employees' && (
         <>
           <input
