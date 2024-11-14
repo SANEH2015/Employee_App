@@ -16,7 +16,7 @@ Install dependencies
 ```
 Start the react server
 ```bash
-  npm run start
+  npm run dev
 ```
 ## Tech Stack
 **Client:** React JS, HTML5, JavaScript, CSS3
